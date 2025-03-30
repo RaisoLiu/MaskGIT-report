@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+
+% 基本包
+\usepackage{xeCJK}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[backend=bibtex,style=numeric]{biblatex}
+\addbibresource{references.bib}
+
+% 設置中文字體
+\setCJKmainfont{Heiti TC}
+\setCJKsansfont{Heiti TC}
+\setCJKmonofont{Heiti TC}
+
+% 頁面設置
+\geometry{a4paper, margin=1in}
+\onehalfspacing
+
+% 超連結設置
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={MaskGIT Report},
+    pdfauthor={劉宇舜},
+    pdfsubject={Deep Learning},
+    pdfkeywords={MaskGIT, Image Generation, Transformer}
+}
+
+% 代碼塊設置
+\lstset{
+    frame=single,
+    breaklines=true,
+    postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookrightarrow\space}},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{red},
+    commentstyle=\color{green!60!black},
+    showstringspaces=false
+}
+
+% 文檔信息
+\title{MaskGIT Report}
+\author{劉宇舜\\Department of Computer Science and Information Engineering\\National Yang Ming Chiao Tung University}
+\date{\today}
+
+\begin{document}
+
+% 添加封面
+\input{src/cover}
+
+% 添加目錄
+\tableofcontents
+\newpage
+
+% 添加報告內容
+\input{src/report}
+
+% 添加參考文獻
+\printbibliography
+
+\end{document} 
