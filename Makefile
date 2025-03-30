@@ -7,6 +7,7 @@ MAIN = src/main
 all:
 	mkdir -p build
 	cp references/references.bib build/
+	cp -r figures build/
 	xelatex -output-directory=build $(MAIN)
 	cd build && bibtex main
 	xelatex -output-directory=build $(MAIN)
@@ -21,6 +22,7 @@ watch:
 	while true; do \
 		mkdir -p build; \
 		cp references/references.bib build/; \
+		cp -r figures build/; \
 		xelatex -output-directory=build $(MAIN); \
 		cd build && bibtex main; \
 		cd .. && xelatex -output-directory=build $(MAIN); \

@@ -1,0 +1,44 @@
+\clearpage
+\section{Implementation Details}
+
+fake_image = torch.randn(1, 3, 64, 64).to(device)
+codebook_mapping, codebook_indices = model.encode_to_z(fake_image)
+Encoder 輸出維度分析:
+codebook_mapping 維度: torch.Size([1, 256, 16, 16])
+codebook_indices 維度: torch.Size([1, 256])
+
+
+在實作中，這次的任務是要了解 MultiHeadAttention 的運作方式，
+
+
+說明 VQGAN 的工作流程？
+
+說明 VQGAN 與 VQVAE 在這邊所扮演的角色？
+
+
+\begin{algorithm}[H]
+\caption{計算 Query 和 Key 之間的歐氏距離}
+\begin{algorithmic}[1]
+\REQUIRE query $\in \mathbb{R}^{B \times S \times D}$, key $\in \mathbb{R}^{B \times S \times D}$
+\ENSURE dist $\in \mathbb{R}^{B \times S \times S}$
+\STATE $q_{square} \gets \sum_{d=1}^D query_{:,:,d}^2$ \COMMENT{Shape: $[B,S,1]$}
+\STATE $k_{square} \gets \sum_{d=1}^D key_{:,:,d}^2$ \COMMENT{Shape: $[B,S,1]$}
+\STATE $qk \gets query \times key^T$ \COMMENT{Shape: $[B,S,S]$}
+\STATE $dist \gets q_{square} + k_{square}^T - 2 \times qk$
+\RETURN dist
+\end{algorithmic}
+\end{algorithm}
+
+
+
+
+
+\subsection{The details of your model}
+This is a model detail section.
+MultiHeadAttention
+
+\subsection{The details of your stage2 training}
+This is a stage2 training detail section.
+
+\subsection{The details of your inference for inpainting task}
+This is an inference detail section. 
