@@ -25,6 +25,9 @@
 \setCJKsansfont{Heiti TC}
 \setCJKmonofont{Heiti TC}
 
+% 統一設定列表間距
+\setlist{noitemsep,topsep=4pt}
+
 % 頁面設置
 \geometry{a4paper, margin=1in}
 \onehalfspacing
@@ -43,16 +46,18 @@
 
 % 代碼塊設置
 \lstset{
-    frame=single,
+    frame=none,
     breaklines=true,
     postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookrightarrow\space}},
-    numbers=left,
-    numberstyle=\tiny\color{gray},
-    basicstyle=\ttfamily\small,
+    basicstyle=\ttfamily\scriptsize,
     keywordstyle=\color{blue},
     stringstyle=\color{red},
     commentstyle=\color{green!60!black},
-    showstringspaces=false
+    showstringspaces=false,
+    backgroundcolor=\color{gray!5},
+    xleftmargin=0em,
+    xrightmargin=0em,
+    linewidth=0.95\textwidth
 }
 
 % 文檔信息
