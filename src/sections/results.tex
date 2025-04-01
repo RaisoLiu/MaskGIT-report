@@ -1,18 +1,91 @@
 \clearpage
 \section{Experiment Results}
+
+\subsection{The best FID score results}
+This is a section of the best FID score results.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/loss_plot.eps}
+    \caption{損失函數圖表}
+    \label{fig:loss_plot}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/fid_vs_epoch.eps}
+    \caption{FID 分數隨訓練週期變化圖}
+    \label{fig:fid_vs_epoch}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/best_fid_score.png}
+    \caption{最佳 FID 分數結果}
+    \label{fig:best_fid_score}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/fid_comparison.eps}
+    \caption{不同策略的 FID 分數比較}
+    \label{fig:fid_comparison}
+\end{figure}
+
+
+
+
+
+
+這個 Best 的 FID 分數是 29.10，是由訓練 300 個 epoch 得到的，batch size 是 64，learning rate 是 8e-5，在最後的 checkpoint 得到的。
+
 This is an experiment section. 
 
 \subsection{Prove your code implementation is correct}
 This is a section of prove your code implementation is correct.
 
-\subsection{Training Masked Generative Image Transformer Hyperparameter tuning}
-This is a section of training Masked Generative Image Transformer Hyperparameter tuning.
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/test_69.png}
+        \label{fig:test_69}
+    \end{subfigure}
+    \vspace{1cm}
+    \begin{subfigure}{\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/mask_test_69.png}
+        \label{fig:mask_test_69}
+    \end{subfigure}
+    \caption{測試圖像與其對應的遮罩示例。上方為原始圖像，下方為遮罩圖像。}
+    \label{fig:test_and_mask}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/test_48.png}
+        \label{fig:test_48}
+    \end{subfigure}
+    \vspace{1cm}
+    \begin{subfigure}{\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/test_303.png}
+        \label{fig:test_303}
+    \end{subfigure}
+    \caption{更多測試圖像示例。上方為測試圖像 48，下方為測試圖像 303。}
+    \label{fig:test_examples}
+\end{figure}
+
+
+
 
 \subsection{How to find a best strategy for Inpainting}
 This is a section of how to find a best strategy for Inpainting.
-
-\subsection{The Best FID Score Results}
-This is a section of the best FID score results.
 
 
 

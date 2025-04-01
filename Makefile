@@ -12,6 +12,7 @@ all:
 	cd build && bibtex main
 	xelatex -output-directory=build $(MAIN)
 	xelatex -output-directory=build $(MAIN)
+	cp build/main.pdf .
 
 # 清理編譯產生的檔案
 clean:

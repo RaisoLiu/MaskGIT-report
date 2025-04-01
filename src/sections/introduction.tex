@@ -1,17 +1,3 @@
 \section{Introduction}
-what is Image Inpainting?
 
-\subsection{What is Masked Generative Image Transformer?}
-This is session of Masked Generative Image Transformer.
-
-\subsection{How to use Masked Generative Image Transformer?}
-This is a session of how to use Masked Generative Image Transformer.
-
-\subsection{What is the role of VQGAN in Masked Generative Image Transformer?}
-This is a session of VQGAN.
-
-\subsection{How to calculate Fid score?}
-This is a session of Fid score. 
-
-
-
+這次的作業是使用 Masked Generative Image Transformer 來進行圖像修復。會由 VQGAN 把每個圖片製作成多個 token 組成的序列，當作 Ground Truth。我們需要利用這個 Ground Truth 來訓練一個 Bi-directional 的 Transformer 模型，舉例來說，這次的圖片輸入是 64x64 的圖片，然後我們會把這個圖片切成 4x4 的區域，接下來把區域稱之為 Token ，然後每個 Token embedding 到 256 dimension 的空間中，所以每個圖片來說會有 16x16 個 Token。由於這個模型是 Bi-directional 的 Transformer，這樣的設計可以讓模型在生成圖像的時候，可以考慮到其他Token。

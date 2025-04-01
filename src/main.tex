@@ -31,6 +31,7 @@
 % 頁面設置
 \geometry{a4paper, margin=1in}
 \onehalfspacing
+\setlength{\parindent}{2em}  % 設定段落第一行縮排為兩個中文字寬度
 
 % 超連結設置
 \hypersetup{
@@ -57,8 +58,13 @@
     backgroundcolor=\color{gray!5},
     xleftmargin=0em,
     xrightmargin=0em,
-    linewidth=0.95\textwidth
+    linewidth=0.95\textwidth,
+    captionpos=b
 }
+
+% 設定所有 listings 環境
+\renewcommand{\lstlistingname}{Code}
+\renewcommand{\lstlistlistingname}{Code List}
 
 % 文檔信息
 \title{MaskGIT Report}
@@ -71,6 +77,7 @@
 \input{src/cover}
 
 % 添加目錄
+\setcounter{tocdepth}{2}
 \tableofcontents
 \newpage
 
